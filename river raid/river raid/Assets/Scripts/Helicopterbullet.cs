@@ -12,6 +12,7 @@ public class Helicopterbullet : MonoBehaviour
     void Start()
     {
         currentTimerValue = timerMaxTime;
+        bullet.transform.position = new Vector3(transform.position.x + (float)5, transform.position.y + (float)3, transform.position.z);
     }
 
     // Update is called once per frame
@@ -23,9 +24,7 @@ public class Helicopterbullet : MonoBehaviour
         }
         else
         {
-            bullet.transform.position = new Vector3(transform.position.x+ (float) 5, transform.position.y + (float)3, transform.position.z);
             Instantiate(bullet);
-            bullet.transform.position += new Vector3(0, 0, -moveAmount);
             currentTimerValue = timerMaxTime;
         }
         

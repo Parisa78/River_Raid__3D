@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class UiManager : MonoBehaviour
     public Text fuelText;
     public Text HeartCount;
     public GameObject  GOver;
+
+    public int score;
     //public GameObject Win;
 
     private void Awake() 
@@ -17,7 +20,7 @@ public class UiManager : MonoBehaviour
 
     void Start()
     {
-
+        score = 0;
     }
 
 
@@ -25,6 +28,7 @@ public class UiManager : MonoBehaviour
     {
         string[] newText = counterText.text.Split(':');
         int hold = int.Parse(newText[1]) + amount;
+        score = hold;
         counterText.text = newText[0] + ": " + hold.ToString();
     }
 
@@ -58,6 +62,11 @@ public class UiManager : MonoBehaviour
         GOver.SetActive(true);
         FindObjectOfType<playerController>().GetComponent<MonoBehaviour>().enabled = false;
         FindObjectOfType<enemyPlacer>().GetComponent<MonoBehaviour>().enabled = false;
+    }
+     //restart
+    public void Retry_Game()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     //public void WiningScene()

@@ -14,9 +14,6 @@ public class enemyPlacer : MonoBehaviour
     private float currentTimerValue;
     private int index;
 
-    //public PlayerController playerController;
-
-
     private void Start()
     {
         currentTimerValue = timerMaxTime;
@@ -43,46 +40,24 @@ public class enemyPlacer : MonoBehaviour
             }
 
             go.transform.position = new Vector3(GetRandomPrefabInitialX(), transform.position.y, transform.position.z);
-            //UpdateTimerValueBasedOnScore();
+            UpdateTimerValueBasedOnScore();
 
             // reset timer
             currentTimerValue = timerMaxTime;
         }
     }
 
-    //private void UpdateTimerValueBasedOnScore()
-    //{
-    //    if (playerController.playerScore % 400 < 200 /*&& playerController.playerScore % 400 >= 0*/)
-    //    {
-    //        timerMaxTime -= 0.03f;
+    private void UpdateTimerValueBasedOnScore()
+    {
+        if (FindObjectOfType<UiManager>().score % 10000 < 100 && FindObjectOfType<UiManager>().score > 0)
+        {
+            timerMaxTime -= 0.03f;
 
-    //        if (timerMaxTime < 0.5f)
-    //            timerMaxTime = 0.5f;
-    //    }
+            if (timerMaxTime < 0.5f)
+                timerMaxTime = 0.5f;
+        }
 
-    //}
-
-    //public void StartFreezingTime()
-    //{
-    //    StartCoroutine(FreezingTime());
-    //}
-
-    //public IEnumerator FreezingTime()
-    //{
-    //    for (int t = 19; t > 0; t -= 1)
-    //    {
-    //        Time.timeScale -= 0.013f;
-    //        yield return new WaitForSecondsRealtime(.013f);
-    //    }
-    //    Time.timeScale = 0;
-    //    yield return new WaitForSecondsRealtime(.013f);
-    //    for (int t = 20; t > 0; t -= 1)
-    //    {
-    //        Time.timeScale += 0.013f;
-    //        yield return new WaitForSecondsRealtime(.013f);
-    //    }
-    //    Time.timeScale = 1;
-    //}
+    }
 
     int GetRandomPrefabType(int max)
     {
