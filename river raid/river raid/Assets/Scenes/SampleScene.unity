@@ -807,6 +807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveAmount: 0.227
   rb: {fileID: 1060880760}
+  timerMaxTime: 2
   bullets: {fileID: 326585297593919430, guid: deb48d732b632f24b9e3401bf242b8aa, type: 3}
 --- !u!54 &1060880760
 Rigidbody:

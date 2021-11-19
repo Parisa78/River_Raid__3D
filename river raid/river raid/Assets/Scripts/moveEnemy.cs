@@ -6,6 +6,7 @@ public class moveEnemy : MonoBehaviour
 {
     // Start is called before the first frame update
     [Range(0f, 1f)] public float moveAmount;
+    public enemyConfig config;
     void Start()
     {
         

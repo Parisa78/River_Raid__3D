@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveAmount: 0.16
+  config: {fileID: 11400000, guid: 29eaee3f05a09e444a810120e1893506, type: 2}
 --- !u!54 &3140387382897485871
 Rigidbody:
   m_ObjectHideFlags: 0

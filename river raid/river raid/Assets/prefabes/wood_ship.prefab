@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveAmount: 0.16
+  config: {fileID: 11400000, guid: c72d9e9bb6fc2744389b42423235046d, type: 2}
 --- !u!65 &8790466592443009385
 BoxCollider:
   m_ObjectHideFlags: 0

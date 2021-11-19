@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Bullets.cs" />
     <Compile Include="Assets\Scripts\FrontEnd.cs" />
     <Compile Include="Assets\Scripts\TagNames.cs" />
+    <Compile Include="Assets\Scripts\enemyConfig.cs" />
     <Compile Include="Assets\Scripts\enemyPlacer.cs" />
     <Compile Include="Assets\Scripts\moveEnemy.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />

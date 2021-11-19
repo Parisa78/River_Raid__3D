@@ -5,53 +5,68 @@ using UnityEngine;
 public class playerController : MonoBehaviour
 {
     [Range(0f, 1f)] public float moveAmount;
+
     private bool roof;
     private bool ground;
     private bool left_wall;
     private bool right_wall;
     public Rigidbody rb;
+    private int fuel;
+
+    public float timerMaxTime;
+    private float currentTimerValue;
 
     public GameObject bullets;
     // Start is called before the first frame update
     void Start()
     {
+        fuel = 100;
         roof=true;
         ground = true;
         left_wall = true;
         right_wall = true;
-}
+        currentTimerValue = timerMaxTime;
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if(currentTimerValue > 0)
+        {
+            currentTimerValue -= Time.deltaTime;
+        }
+        else
+        {
+            fuel -= 5;
+            currentTimerValue = timerMaxTime;
+        }
+
+        print("fuel" + fuel);
         if (Input.GetKey(KeyCode.D) && right_wall)
         {
             transform.position += new Vector3(moveAmount, 0, 0);
-            //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         }
         if (Input.GetKey(KeyCode.A) && left_wall)
         {
             transform.position += new Vector3(-moveAmount, 0, 0);
-            //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         }
 
         if (Input.GetKey(KeyCode.W) && roof)
         {
             transform.position += new Vector3(0, moveAmount, 0);
-            //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         }
 
         if (Input.GetKey(KeyCode.S) && ground)
         {
             transform.position += new Vector3(0, -moveAmount, 0);
-            //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
             Instantiate(bullets);
-            //rb.constraints = RigidbodyConstraints.FreezeRotationZ;
         }
+
+        
     }
 
     private void OnCollisionEnter(Collision collision)
