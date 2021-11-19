@@ -109,6 +109,19 @@ public class playerController : MonoBehaviour
             uimanager.UpdateHeartCountText(1);
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.CompareTag(TagNames.enemy.ToString()))
+        {
+            Debug.Log("heeeaart");
+            uimanager.UpdateHeartCountText(-1);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag(TagNames.Hbullet.ToString()))
+        {
+            uimanager.UpdateHeartCountText(-1);
+            Destroy(collision.gameObject);
+        }
     }
 
     private void OnCollisionExit(Collision collision)

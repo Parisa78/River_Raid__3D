@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveAmount: 0.22
-  timerMaxTime: 10
+  timerMaxTime: 1
   bullet: {fileID: 553715639181295614, guid: 764b9ca2569317b46987ff1075c51596, type: 3}
 --- !u!1001 &4463748219974790220
 PrefabInstance:
