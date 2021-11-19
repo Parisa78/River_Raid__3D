@@ -11,6 +11,7 @@ public enum TagNames
     EndBack,
     EndFront,
     bullet,
-    enemy
+    enemy,
+    Hbullet
 }
     

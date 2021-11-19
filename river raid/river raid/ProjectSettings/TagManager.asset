@@ -12,6 +12,7 @@ TagManager:
   - EndFront
   - bullet
   - enemy
+  - Hbullet
   layers:
   - Default
   - TransparentFX
