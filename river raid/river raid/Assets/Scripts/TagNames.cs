@@ -13,6 +13,7 @@ public enum TagNames
     bullet,
     enemy,
     Hbullet,
-    fuel
+    fuel,
+    heart
 }
     

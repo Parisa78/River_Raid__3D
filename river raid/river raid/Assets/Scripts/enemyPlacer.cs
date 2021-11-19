@@ -12,6 +12,7 @@ public class enemyPlacer : MonoBehaviour
     // Start is called before the first frame update
     public float timerMaxTime;
     private float currentTimerValue;
+    private int index;
 
     //public PlayerController playerController;
 
@@ -33,7 +34,8 @@ public class enemyPlacer : MonoBehaviour
 
             if (UnityEngine.Random.Range(0, 2000) % 2 == 0)
             {
-                go = Instantiate(comboPrefabs[GetRandomPrefabType(comboPrefabs.Length)]);
+                index = GetRandomPrefabType(comboPrefabs.Length);
+                go = Instantiate(comboPrefabs[index]);
             }
             else
             {
@@ -41,7 +43,6 @@ public class enemyPlacer : MonoBehaviour
             }
 
             go.transform.position = new Vector3(GetRandomPrefabInitialX(), transform.position.y, transform.position.z);
-
             //UpdateTimerValueBasedOnScore();
 
             // reset timer

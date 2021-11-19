@@ -7,8 +7,7 @@ public class UiManager : MonoBehaviour
 {
     public Text counterText;
     public Text fuelText;
-    //public EventSystemCustom eventSystem;
-    //public Text HeartCount;
+    public Text HeartCount;
     public GameObject  GOver;
     //public GameObject Win;
 
@@ -18,8 +17,7 @@ public class UiManager : MonoBehaviour
 
     void Start()
     {
-        //eventSystem.GetHeartsCount.AddListener(UpdateHeartCountText);
-        //eventSystem.GameOver.AddListener(GameOverScene);
+
     }
 
 
@@ -45,11 +43,16 @@ public class UiManager : MonoBehaviour
         fuelText.text = newText[0] + ": " + hold.ToString();
     }
 
-    //public void UpdateHeartCountText()
-    //{
-    //    Debug.Log("UPDATE KEY SCORE");
-    //    HeartCount.text = FindObjectOfType<PlayerController>().playerHeartsCount.ToString();
-    //}
+    public void UpdateHeartCountText(int amount)
+    {
+
+        int hold = int.Parse(HeartCount.text) + amount;
+        HeartCount.text =  hold.ToString();
+        if (hold <= 0)
+        {
+            GameOverScene();
+        }
+    }
     public void GameOverScene()
     {
         GOver.SetActive(true);

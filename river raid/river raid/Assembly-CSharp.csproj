@@ -66,7 +66,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BackEnd.cs" />
     <Compile Include="Assets\Scripts\Bullets.cs" />
-    <Compile Include="Assets\Scripts\EventSystemCustom.cs" />
     <Compile Include="Assets\Scripts\FrontEnd.cs" />
     <Compile Include="Assets\Scripts\Helicopterbullet.cs" />
     <Compile Include="Assets\Scripts\TagNames.cs" />
@@ -76,7 +75,9 @@
     <Compile Include="Assets\Scripts\fuelmove.cs" />
     <Compile Include="Assets\Scripts\moveEnemy.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
+    <Compile Include="Assets\model\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\model\Shipping Container\Scenes\PlayerController\PlayerController.cs" />
+    <None Include="Assets\model\AurynSky\Gems Ultimate Pack\READ ME.txt" />
     <None Include="Assets\model\Low Poly Helicopters Pack Free\Shaders\UnlitShadow.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:/unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

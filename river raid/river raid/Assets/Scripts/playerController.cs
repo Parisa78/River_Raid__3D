@@ -61,7 +61,7 @@ public class playerController : MonoBehaviour
             transform.position += new Vector3(0, -moveAmount, 0);
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             Instantiate(bullets);
         }
@@ -94,6 +94,20 @@ public class playerController : MonoBehaviour
         {
             Debug.Log("groound");
             ground = false;
+        }
+
+        if (collision.gameObject.CompareTag(TagNames.fuel.ToString()))
+        {
+            Debug.Log("fuel");
+            uimanager.FuelCount(10);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag(TagNames.heart.ToString()))
+        {
+            Debug.Log("heeeaart");
+            uimanager.UpdateHeartCountText(1);
+            Destroy(collision.gameObject);
         }
     }
 
