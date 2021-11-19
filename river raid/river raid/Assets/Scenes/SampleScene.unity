@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf0ca80d3a3e0549a971cdbb3e29bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAmount: 0.227
+  moveAmount: 0.22
   rb: {fileID: 1060880760}
   timerMaxTime: 2
   bullets: {fileID: 326585297593919430, guid: deb48d732b632f24b9e3401bf242b8aa, type: 3}
@@ -1297,6 +1297,7 @@ MonoBehaviour:
   fuelText: {fileID: 690313668}
   HeartCount: {fileID: 963367592}
   GOver: {fileID: 1625772404}
+  score: 0
 --- !u!1 &1220631349
 GameObject:
   m_ObjectHideFlags: 0
