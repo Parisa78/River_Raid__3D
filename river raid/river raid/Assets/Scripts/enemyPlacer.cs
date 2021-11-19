@@ -19,7 +19,7 @@ public class enemyPlacer : MonoBehaviour
         currentTimerValue = timerMaxTime;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (currentTimerValue > 0)
         {

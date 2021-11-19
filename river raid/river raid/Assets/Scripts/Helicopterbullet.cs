@@ -16,7 +16,7 @@ public class Helicopterbullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (currentTimerValue > 0)
         {

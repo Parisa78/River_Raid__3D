@@ -629,5 +629,5 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/git/unity projects/Hw3_river raid/River_Raid__3D/river raid/HW/Export/river
+  playerPath: D:/git/unity projects/Hw3_river raid/River_Raid__3D/HW/Export/river
     raid.exe

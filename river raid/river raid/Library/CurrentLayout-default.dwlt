@@ -76,7 +76,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 82
+  controlID: 37
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 122
+  controlID: 105
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -341,11 +341,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/prefabes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/prefabes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\git\unity projects\Hw3_river raid\River_Raid__3D\river raid\river
     raid
@@ -353,23 +353,23 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ae360000
-    m_LastClickedID: 13998
+    m_SelectedIDs: a8360000
+    m_LastClickedID: 13992
     m_ExpandedIDs: 000000009a3600009c360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scripts
-      m_OriginalName: Scripts
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13998
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -506,23 +506,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6a3b0000
-      m_LastClickedID: 15210
-      m_ExpandedIDs: 3ef4ffff5af4fffff6f4ffff6afbffff60340000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0e37ffff2a37ffff2c37ffff9e37ffffba37ffffbc37ffffb03affffcc3affff683bffff6272ffff7e72ffff8072ffff7275ffff8e75ffff9075ffffe07cfffffc7cfffffe7cffff7a7effff967effff987effff8c80ffffa880ffffaa80ffffc681ffffe281ffffe481ffff4c83ffff6883ffff6a83ffffb684ffffd284ffffd484ffff0086ffff1c86ffff1e86ffffa287ffffbe87ffffc087ffff4c89ffff6889ffff6a89ffffc48bffffe08bffffe28bffff248cffff408cffff428cffff1a8dffff368dffffd48dffff4290ffff5e90fffffa90ffff5893ffff7493ffff1094ffffc6a9ffffe2a9ffff8aaaffff04bdffff20bdffffbcbdffff7cbfffff98bfffff34c0ffff6afbffffea330000fc7e0000d2a8000062a9000078ad00001eb20000a6c300004ec40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Main Camera
+        m_OriginalName: Main Camera
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 13384
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -568,9 +568,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 430.90445, y: 152.62515, z: -14.350312}
+    m_Target: {x: 434.53, y: 167.9, z: 17.870003}
     speed: 2
-    m_Value: {x: 430.90445, y: 152.62515, z: -14.350312}
+    m_Value: {x: 434.53, y: 167.9, z: 17.870003}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
@@ -606,7 +606,7 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
@@ -618,15 +618,15 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0, y: 0.00000014131705, z: 0, w: -1.0000001}
   m_Size:
-    m_Target: 4.6531477
+    m_Target: 378.29016
     speed: 2
-    m_Value: 4.6531477
+    m_Value: 396.11536
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -719,18 +719,18 @@ MonoBehaviour:
       y: 21
       width: 904
       height: 404
-    m_Scale: {x: 1.3842334, y: 1.3842334}
-    m_Translation: {x: 437.44098, y: 190.61052}
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 452, y: 202}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -316.01678
-      y: -137.70114
-      width: 653.0691
-      height: 291.8583
+      x: -452
+      y: -202
+      width: 904
+      height: 404
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1130, y: 531.25}

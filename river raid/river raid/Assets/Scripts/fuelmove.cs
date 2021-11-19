@@ -11,7 +11,8 @@ public class fuelmove : MonoBehaviour
     }
 
     // Update is called once per frames
-    void Update()
+
+    void FixedUpdate()
     {
         transform.position += new Vector3(0, 0, -moveAmount);
     }

@@ -30,7 +30,7 @@ public class playerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(currentTimerValue > 0)
         {
@@ -61,7 +61,7 @@ public class playerController : MonoBehaviour
             transform.position += new Vector3(0, -moveAmount, 0);
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bullets);
         }
