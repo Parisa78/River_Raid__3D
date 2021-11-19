@@ -11,21 +11,22 @@ public class playerController : MonoBehaviour
     private bool left_wall;
     private bool right_wall;
     public Rigidbody rb;
-    private int fuel;
+
 
     public float timerMaxTime;
     private float currentTimerValue;
+    private UiManager uimanager;
 
     public GameObject bullets;
     // Start is called before the first frame update
     void Start()
     {
-        fuel = 100;
         roof=true;
         ground = true;
         left_wall = true;
         right_wall = true;
         currentTimerValue = timerMaxTime;
+        uimanager = FindObjectOfType<UiManager>();
     }
 
     // Update is called once per frame
@@ -37,11 +38,10 @@ public class playerController : MonoBehaviour
         }
         else
         {
-            fuel -= 5;
+            uimanager.FuelCount(-5);
             currentTimerValue = timerMaxTime;
         }
 
-        print("fuel" + fuel);
         if (Input.GetKey(KeyCode.D) && right_wall)
         {
             transform.position += new Vector3(moveAmount, 0, 0);

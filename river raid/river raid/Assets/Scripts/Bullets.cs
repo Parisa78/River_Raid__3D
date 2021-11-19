@@ -6,12 +6,13 @@ public class Bullets : MonoBehaviour
 {
     [Range(0f, 1f)] public float moveAmount;
     private playerController player;
+    private UiManager uimanager;
     // Start is called before the first frame update
-    private int score;
+
     void Start()
     {
-        score = 0;
         player = FindObjectOfType<playerController>();
+        uimanager = FindObjectOfType<UiManager>();
         transform.position = player.transform.position;
     }
 
@@ -26,10 +27,15 @@ public class Bullets : MonoBehaviour
         {
             Debug.Log("shoot");
             enemyConfig enemy_conf = collision.gameObject.GetComponent<moveEnemy>().config;
-            score += enemy_conf.score;
-            Debug.Log("score"+ score);
+            uimanager.ScoreCount(enemy_conf.score);
             Destroy(collision.gameObject);
-            
+        }
+
+        if (collision.gameObject.CompareTag(TagNames.fuel.ToString()))
+        {
+            Debug.Log("fuel");
+            uimanager.FuelCount(10);
+            Destroy(collision.gameObject);
         }
     }
 

@@ -12,6 +12,7 @@ public enum TagNames
     EndFront,
     bullet,
     enemy,
-    Hbullet
+    Hbullet,
+    fuel
 }
     

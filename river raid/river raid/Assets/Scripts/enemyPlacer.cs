@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyPlacer : MonoBehaviour
 {
     public GameObject[] prefabs;
-    //public GameObject[] comboPrefabs;
+    public GameObject[] comboPrefabs;
     
     public float minX;
     public float maxX;
@@ -31,20 +31,16 @@ public class enemyPlacer : MonoBehaviour
         {
             GameObject go;
 
-            //if (UnityEngine.Random.Range(0, 2000) % 2 == 0)
-            //{
-            //    go = Instantiate(comboPrefabs[GetRandomPrefabType(comboPrefabs.Length)]);
-            //}
-            //else
-            //{
-            //go = Instantiate(prefabs[GetRandomPrefabType(prefabs.Length)]);
-            //}
-            go = Instantiate(prefabs[GetRandomPrefabType(prefabs.Length)]);
             if (UnityEngine.Random.Range(0, 2000) % 2 == 0)
             {
-                go.transform.position = new Vector3(GetRandomPrefabInitialX(), transform.position.y, transform.position.z);
+                go = Instantiate(comboPrefabs[GetRandomPrefabType(comboPrefabs.Length)]);
             }
-            //go.transform.position += new Vector3(0, 0, -moveAmount);
+            else
+            {
+                go = Instantiate(prefabs[GetRandomPrefabType(prefabs.Length)]);
+            }
+
+            go.transform.position = new Vector3(GetRandomPrefabInitialX(), transform.position.y, transform.position.z);
 
             //UpdateTimerValueBasedOnScore();
 

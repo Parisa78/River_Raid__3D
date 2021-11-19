@@ -24,6 +24,12 @@ public class BackEnd : MonoBehaviour
             Debug.Log(" dead end");
             Destroy(collision.gameObject);
         }
+
+        if (collision.gameObject.CompareTag(TagNames.fuel.ToString()))
+        {
+            Debug.Log("back end fuel");
+            Destroy(collision.gameObject);
+        }
     }
     //private void OnCollisionEnter(Collision collision)
     //{

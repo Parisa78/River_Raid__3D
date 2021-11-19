@@ -13,6 +13,7 @@ TagManager:
   - bullet
   - enemy
   - Hbullet
+  - fuel
   layers:
   - Default
   - TransparentFX

@@ -28,5 +28,12 @@ public class moveEnemy : MonoBehaviour
 
         }
 
+        if (collision.gameObject.CompareTag(TagNames.bullet.ToString()))
+        {
+            Debug.Log(" hit bullet ");
+            Destroy(collision.gameObject);
+
+        }
+
     }
 }

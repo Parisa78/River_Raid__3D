@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\UiManager.cs" />
     <Compile Include="Assets\Scripts\enemyConfig.cs" />
     <Compile Include="Assets\Scripts\enemyPlacer.cs" />
+    <Compile Include="Assets\Scripts\fuelmove.cs" />
     <Compile Include="Assets\Scripts\moveEnemy.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
     <Compile Include="Assets\model\Shipping Container\Scenes\PlayerController\PlayerController.cs" />
